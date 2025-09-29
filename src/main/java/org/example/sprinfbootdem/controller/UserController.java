@@ -2,6 +2,7 @@ package org.example.sprinfbootdem.controller;
 
 import org.example.sprinfbootdem.model.User;
 import org.example.sprinfbootdem.service.UserService;
+import org.example.sprinfbootdem.service.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ public class UserController {
     private final UserService userService;
 
     @Autowired
-    public UserController(UserService userService) {
+    public UserController(UserService userService) {  // инжект через интерфейс
         this.userService = userService;
     }
 
